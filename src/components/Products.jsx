@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Products = () => {
 
@@ -26,14 +27,29 @@ const Products = () => {
     getProducts();
   }, []);
 
-  // carregamento dos produtos
+  // animação de loading
   const Loading = () => {
+    const [load, setload] = useState(false)
+    useEffect(()=>{
+      setload(true)
+      setTimeout(()=>{
+        setload(false)
+
+      },5000)
+    })
+
     return(
       <>
-        Loading...
+        <div className='load d-flex justify-content-center'>
+          {
+            loading ? 
+            <ClipLoader color={'#000'} loading={load} size={100} /> : null
+          }
+
+        </div>
       </>
-    )
-  }
+    );
+  };
 
   // categorias
   const ShowProducts = () => {
