@@ -4,9 +4,9 @@ import React from 'react';
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div class="container">
-          <a class="navbar-brand fw-bold fs-4" href="#">ArcH-Store</a>
+          <a class="navbar-brand fw-bold fs-3" href="#">ArcH-Store</a>
           
           <button 
             class="navbar-toggler" 
