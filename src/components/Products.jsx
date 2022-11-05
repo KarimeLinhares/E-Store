@@ -29,21 +29,16 @@ const Products = () => {
 
   // animação de loading
   const Loading = () => {
-    const [load, setload] = useState(false)
     useEffect(()=>{
-      setload(true)
-      setTimeout(()=>{
-        setload(false)
-
-      },5000)
-    })
-
+      setLoading(true)
+    }, [])
+    
     return(
       <>
         <div className='load d-flex justify-content-center'>
           {
             loading ? 
-            <ClipLoader color={'#000'} loading={load} size={100} /> : null
+            <ClipLoader color={'#000'} loading={loading} size={100} /> : null
           }
 
         </div>
@@ -51,16 +46,22 @@ const Products = () => {
     );
   };
 
+  // filtro de categorias
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((x)=>x.category === cat);
+    setFilter(updatedList);
+  }
+
   // categorias
   const ShowProducts = () => {
     return (
       <>
         <div className='buttons d-flex justify-content-center mb-5 pb-5'>
-          <button className='btn btn-outline-dark me-2'>Tudo</button>
-          <button className='btn btn-outline-dark me-2'>Seção Masculina</button>
-          <button className='btn btn-outline-dark me-2'>Seção Feminina</button>
-          <button className='btn btn-outline-dark me-2'>Joalheria</button>
-          <button className='btn btn-outline-dark me-2'>Eletrônicos</button>
+          <button className='btn btn-outline-dark me-2' onClick={()=>setFilter(data)}>Tudo</button>
+          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("men's clothing")}>Seção Masculina</button>
+          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("women's clothing")}>Seção Feminina</button>
+          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("jewelery")}>Joalheria</button>
+          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("electronics")}>Eletrônicos</button>
         </div>
         {filter.map((product)=>{
           return(
