@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // feito com bootstrap
 const Navbar = () => {
@@ -6,7 +7,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold fs-3" href="#">ArcH-Store</a>
+          <NavLink className="navbar-brand fw-bold fs-3" to="/">ArcH-Store</NavLink>
           
           <button 
             className="navbar-toggler" 
@@ -24,25 +25,25 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Produtos</a>
+                <NavLink className="nav-link" to="/products">Produtos</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Sobre</a>
+                <NavLink className="nav-link" to="/about">Sobre</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Contato</a>
+                <NavLink className="nav-link" to="/contact">Contato</NavLink>
               </li>
             </ul>
             
             {/* carrinho */}
             <div className="buttons">
-              <a href='' className="btn btn-outline-dark">
+              <NavLink to='/cart' className="btn btn-outline-dark">
                 <i className="fa fa-shopping-cart me-1"></i> 
                 Carrinho (0)
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
