@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { NavLink } from 'react-router-dom';
 import ClipLoader from "react-spinners/ClipLoader";
 
 const Products = () => {
@@ -68,14 +69,14 @@ const Products = () => {
             <>
               {/* quadros dos produtos */}
               <div className='col-md-3 mb-4'>
-                <div class="card h-100 text-center p4" key={product.id}>
-                  <img src={product.image} class="card-img-top" alt={product.title} height="250px" />
-                  <div class="card-body">
-                    <h6 class="card-title mb-0">{product.title.substring(0,20)}...</h6>
-                    <p class="card-text">
+                <div className="card h-100 text-center p4" key={product.id}>
+                  <img src={product.image} className="card-img-top" alt={product.title} height="250px" />
+                  <div className="card-body">
+                    <h6 className="card-title mb-0">{product.title.substring(0,20)}...</h6>
+                    <p className="card-text">
                       ${product.price}
                     </p>
-                    <a href="#" class="btn btn-outline-dark fw-bold">Compre Agora</a>
+                    <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark fw-bold">Compre Agora</NavLink>
                   </div>
                 </div>
               </div>
