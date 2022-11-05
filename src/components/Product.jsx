@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addCart } from '../redux/action';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import ClipLoader from "react-spinners/ClipLoader";
-
-
 
 //página do produto
 const Product = () => {
@@ -43,7 +41,6 @@ const Product = () => {
             loading ? 
             <ClipLoader color={'#000'} loading={loading} size={100} /> : null
           }
-  
         </div>
       </>
     );
@@ -90,9 +87,7 @@ const Product = () => {
       <div className='container py-5'>
         <div className='row py-4'>
           {loading ? <Loading/> : <ShowProduct/>}
-
         </div>
-
       </div>
     </div>
   );

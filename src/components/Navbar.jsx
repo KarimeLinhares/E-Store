@@ -1,8 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 // feito com bootstrap
 const Navbar = () => {
+
+  //muda o número de produtos adicionados ao carrinho
+  const state = useSelector((state) => state.handleCart)
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
@@ -42,7 +47,7 @@ const Navbar = () => {
             <div className="buttons">
               <NavLink to='/cart' className="btn btn-outline-dark">
                 <i className="fa fa-shopping-cart me-1"></i> 
-                Carrinho (0)
+                Carrinho ({state.length})
               </NavLink>
             </div>
           </div>
