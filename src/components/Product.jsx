@@ -26,7 +26,7 @@ const Product = () => {
       setLoading(false);
     }
     getProducts();
-  }, []);
+  }, [id]);
 
   // animação de loading
   const Loading = () => {
