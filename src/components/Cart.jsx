@@ -36,10 +36,10 @@ const Cart = () => {
           <div className='container py-2'>
             <div className='row justify-content-center bg-light rounded-3 py-4'>
               <div className='col-md-3 bg-light p-5 rounded'>
-                <img src={product.image} alt={product.title} height='200px' width={180} />
+                <img src={product.image} alt={product.title} height='120px' width={120} />
               </div>
               <div className='col-md-4 text-black'>
-                <h3>{product.title}</h3>
+                <h4>{product.title}</h4>
                 <p className='lead m-0 text-black'>
                   Valor Único = ${product.price}
                 </p>

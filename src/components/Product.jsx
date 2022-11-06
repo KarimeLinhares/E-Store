@@ -52,8 +52,8 @@ const Product = () => {
         <div className='px-4 my-5 bg-light rounded-3 py-5'>
           <div className='container py-4'>
             <div className='row justify-content-center'>
-              <div className='col-md-6'>
-                <img src={product.image} alt={product.title} height='400px' width={400} />
+              <div className='col-md-6 py-5 '>
+                <img src={product.image} alt={product.title} height='300px' width={300} />
               </div>
               <div className='col-md-6'>
                 <h4 className='text-uppercase text-black-50'>
@@ -72,10 +72,10 @@ const Product = () => {
                 <p className='lead text-black'>
                   {product.description}
                 </p>
-                <button className='btn btn-outline-dark px-4 py-2' onClick={()=>addProduct(product)}>
+                <button className='btn btn-outline-dark px-4 py-2 my-2 me-2' onClick={()=>addProduct(product)}>
                   Adicione ao carrinho
                 </button>
-                <NavLink to='/cart' className='btn btn-dark ms-2 px-3 py-2'>
+                <NavLink to='/cart' className='btn btn-dark px-3 py-2'>
                   Veja o carrinho
                 </NavLink>
               </div>

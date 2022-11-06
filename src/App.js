@@ -9,15 +9,15 @@ import Cart from './components/Cart';
 import styled, {ThemeProvider} from 'styled-components';
 import {lightTheme, darkTheme, GlobalStyles} from './themes.js';
 
+
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
 `;
 
-//caminho nos links internos
 function App() {
 
+  //theme toggler
   const [theme, setTheme] = useState("light");
-
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
@@ -31,7 +31,6 @@ function App() {
         <button className='themeBtn' onClick={() => themeToggler()}>
           {
             theme === "light" ? <i className="fa fa-sun-o">Light</i> : <i className="fa fa-moon-o">Dark</i>
-
           }
         </button>
       <Routes>
