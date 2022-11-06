@@ -2,3 +2,12 @@
 .navbar-nav a {
   font-size: 1.2rem;
 }
+
+
+/* btn theme */
+.themeBtn {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 20px;
+}
