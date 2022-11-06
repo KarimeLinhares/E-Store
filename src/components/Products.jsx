@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import ClipLoader from "react-spinners/ClipLoader";
-import {lightTheme, darkTheme, GlobalStyles} from '../themes.js';
 
 
 const Products = () => {
