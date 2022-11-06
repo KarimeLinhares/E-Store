@@ -72,7 +72,7 @@ const Products = () => {
               {/* quadros dos produtos */}
               <div className='col-md-3 mb-4'>
                 <div className="card h-100 text-center p4" key={product.id}>
-                  <img src={product.image} className="card-img-top" alt={product.title} height="250px" />
+                  <img src={product.image} className="card-img-top" alt={product.title} height="350px" />
                   <div className="card-body">
                     <h6 className="card-title mb-0 text-black">{product.title.substring(0,20)}...</h6>
                     <p className="card-text text-black">
