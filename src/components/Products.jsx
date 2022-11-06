@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import ClipLoader from "react-spinners/ClipLoader";
+import {lightTheme, darkTheme, GlobalStyles} from '../themes.js';
+
 
 const Products = () => {
 
@@ -39,7 +41,7 @@ const Products = () => {
         <div className='load d-flex justify-content-center'>
           {
             loading ? 
-            <ClipLoader color={'#000'} loading={loading} size={100} /> : null
+            <ClipLoader color={'#FB2576'} loading={loading} size={100}/> : null
           }
 
         </div>
@@ -58,11 +60,11 @@ const Products = () => {
     return (
       <>
         <div className='buttons d-flex justify-content-center mb-5 pb-5'>
-          <button className='btn btn-outline-dark me-2' onClick={()=>setFilter(data)}>Tudo</button>
-          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("men's clothing")}>Seção Masculina</button>
-          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("women's clothing")}>Seção Feminina</button>
-          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("jewelery")}>Joalheria</button>
-          <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("electronics")}>Eletrônicos</button>
+          <button className='btn btn-secondary me-2' onClick={()=>setFilter(data)}>Tudo</button>
+          <button className='btn btn-secondary me-2' onClick={()=>filterProduct("men's clothing")}>Seção Masculina</button>
+          <button className='btn btn-secondary me-2' onClick={()=>filterProduct("women's clothing")}>Seção Feminina</button>
+          <button className='btn btn-secondary me-2' onClick={()=>filterProduct("jewelery")}>Joalheria</button>
+          <button className='btn btn-secondary me-2' onClick={()=>filterProduct("electronics")}>Eletrônicos</button>
         </div>
         {filter.map((product)=>{
           return(
@@ -72,8 +74,8 @@ const Products = () => {
                 <div className="card h-100 text-center p4" key={product.id}>
                   <img src={product.image} className="card-img-top" alt={product.title} height="250px" />
                   <div className="card-body">
-                    <h6 className="card-title mb-0">{product.title.substring(0,20)}...</h6>
-                    <p className="card-text">
+                    <h6 className="card-title mb-0 text-black">{product.title.substring(0,20)}...</h6>
+                    <p className="card-text text-black">
                       ${product.price}
                     </p>
                     <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark fw-bold">Compre Agora</NavLink>

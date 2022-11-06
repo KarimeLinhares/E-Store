@@ -39,7 +39,7 @@ const Product = () => {
         <div className='load d-flex justify-content-center'>
           {
             loading ? 
-            <ClipLoader color={'#000'} loading={loading} size={100} /> : null
+            <ClipLoader color={'#FB2576'} loading={loading} size={100} /> : null
           }
         </div>
       </>
@@ -49,33 +49,38 @@ const Product = () => {
   const ShowProduct = () => {
     return(
       <>
-        <div className='col-md-6'>
-          <img src={product.image} alt={product.title} height='400px' width={400} />
-        </div>
-
-        <div className='col-md-6'>
-          <h4 className='text-uppercase text-black-50'>
-            {product.category}
-          </h4>
-          <h1 className='display-5'>
-            {product.title}
-          </h1>
-          <p className='lead fw-bolder'>
-            Rating {product.rating && product.rating.rate}
-            <i className='fa fa-star'></i>
-          </p>
-          <h3 className='display-6 fw-bold my-4'>
-            $ {product.price}
-          </h3>
-          <p className='lead'>
-            {product.description}
-          </p>
-          <button className='btn btn-outline-dark px-4 py-2' onClick={()=>addProduct(product)}>
-            Adicione ao carrinho
-          </button>
-          <NavLink to='/cart' className='btn btn-dark ms-2 px-3 py-2'>
-            Veja o carrinho
-          </NavLink>
+        <div className='px-4 my-5 bg-light rounded-3 py-5'>
+          <div className='container py-4'>
+            <div className='row justify-content-center'>
+              <div className='col-md-6'>
+                <img src={product.image} alt={product.title} height='400px' width={400} />
+              </div>
+              <div className='col-md-6'>
+                <h4 className='text-uppercase text-black-50'>
+                  {product.category}
+                </h4>
+                <h1 className='display-5 text-black'>66
+                  {product.title}
+                </h1>
+                <p className='lead fw-bolder text-black'>
+                  Rating {product.rating && product.rating.rate}
+                  <i className='fa fa-star'></i>
+                </p>
+                <h3 className='display-6 fw-bold my-4 text-black'>
+                  $ {product.price}
+                </h3>
+                <p className='lead text-black'>
+                  {product.description}
+                </p>
+                <button className='btn btn-outline-dark px-4 py-2' onClick={()=>addProduct(product)}>
+                  Adicione ao carrinho
+                </button>
+                <NavLink to='/cart' className='btn btn-dark ms-2 px-3 py-2'>
+                  Veja o carrinho
+                </NavLink>
+              </div>
+            </div>
+          </div>
         </div>
 
       </>
