@@ -49,7 +49,7 @@ const Product = () => {
   const ShowProduct = () => {
     return(
       <>
-        <div className='px-4 my-5 bg-light rounded-3 py-5'>
+        <div className='px-4 bg-light rounded-3 py-5'>
           <div className='container py-4'>
             <div className='row justify-content-center'>
               <div className='col-md-6 py-5 '>
