@@ -10,12 +10,6 @@ Projeto de loja online, usando React.js, Bootstrap, Redux, e consumo de API (Fak
 <img width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" />
 </p>
 
-O projeto possui:
-* Responsividade ✅
-* Temas light mode/ Dark mode ✅
-* Código limpo e tratado com eslint ✅
-
-
 ## Home
 ![image](https://user-images.githubusercontent.com/89994391/200202981-72ffac8b-db89-400f-aa16-6a95c073eb8f.png)
 
